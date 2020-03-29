@@ -1,40 +1,96 @@
-<strong>Do you approve this tweet?</strong>
-
 <form role="form" class="form-horizontal">
-  <div class="control-group">
-    <label class="control-label">Email</label>
-    <div class="controls">
-      <input type="text" class="form-control" 
-        cam-variable-name="email"        
-        readonly="true"
-        />
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label">Content</label>
-    <div class="controls">
-      <input type="text" class="form-control"
-        cam-variable-name="content"
-		readonly="true"
-         />
-    </div>
-  </div>  
-  <div class="control-group">
-    <label class="control-label">Approve?</label>
-    <div class="controls">
-      <input type="checkbox" class="form-control"
-        cam-variable-name="approved"
-        cam-variable-type="Boolean"
-         />
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label">Comments</label>
-    <div class="controls">
-      <input type="text" class="form-control"
-		cam-variable-name="comments"
-		cam-variable-type="String"
-        />
-    </div>
-  </div>    
+	<h2>Talep Bilgileri</h2>
+	<div class="control-group">
+		<label class="control-label">Şablon</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="sablon" cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Turkcell Grup Şirketi</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="grupSirketi" cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Karşı taraf ünvanı</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="karsiTarafUnvani" cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Sözleşme Başlangıç Tarihi</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="sozlesmeBaslangicTarihi"
+				cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Sözleşme Bitiş Tarihi</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="sozlesmeBitisTarihi" cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Bedelli</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="bedelli" cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Sözleşme Bedeli</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="sozlesmeBedeli" cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Lisans Başlangıç Tarihi</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="lisansBaslangicTarihi" cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Lisans Bitiş Tarihi</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="lisansBitisTarihi" cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Garanti Süresi</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="garantiSuresi" cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Teslim Süresi</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="teslimSuresi" cam-variable-type="String" />
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Voucher</label>
+		<div class="controls">
+			<input class="form-control" type="text" readonly
+				cam-variable-name="voucher" cam-variable-type="String" />
+		</div>
+	</div>
+	<hr>
+	<div class="control-group">
+		<label class="control-label">Yorum</label>
+		<div class="controls">
+			<textarea cam-variable-name="satinalmaYorum" id="satinalmaYorum"
+				cam-variable-type="String" class="form-control"></textarea>
+		</div>
+	</div>
 </form>
