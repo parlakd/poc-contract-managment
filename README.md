@@ -1,2 +1,2 @@
-# cihat.altuntas-gmail.com
-poc-contract-managment
+# POC - Sözleşme Yönetim Aracı
+Satinalma Uzmaninin sözleşme oluşturmaya başladığı ve iş akışını ilerlettikten sonra akışın paralel olarak Satınalma uzmanının Yöneticisine ve Hukuk birimine ilerlediği, Paralel akışdaki herkes tarafından onaylandıktan sonra satınalmaya sözleşme geri gönderilip Arşiv adımınada sonlandırılacak bir akış tasarlanacaktır.
