@@ -1,25 +1,121 @@
-<strong>Create Tweet</strong>
+<strong>Talep</strong>
 
 <form role="form" class="form-horizontal">
-  <div class="control-group">
-    <label class="control-label">Email</label>
-    <div class="controls">
-      <input type="text" class="form-control" 
-        cam-variable-name="email"
-        cam-variable-type="String"
-        required  
-        ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/"
-        />
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label">Content</label>
-    <div class="controls">
-      <input type="text" class="form-control"
-		cam-variable-name="content"
-        cam-variable-type="String"        
-        required
-        />
-    </div>
-  </div>  
+	<div class="control-group">
+		<label class="control-label">Şablon</label>
+		<div class="controls">
+			<select class="form-control" required cam-variable-name="sablon"
+				cam-variable-type="String">
+				<option>Kampanya Sözleşme Şablonu</option>
+				<option>Çerçeve Gizlilik Sözleşmesi Şablonu</option>
+				<option>Örnek Şablon 1</option>
+				<option>Örnek Şablon 2</option>
+			</select>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Turkcell Grup Şirketi</label>
+		<div class="controls">
+			<select class="form-control" required cam-variable-name="grupSirketi"
+				cam-variable-type="String">
+				<option>REHBERLİK HİZMETLERİ SERVİSİ A.Ş.</option>
+				<option>Lifecell Ventures</option>
+				<option>BELTEL TELEKOMİNİKASYON HİZMETLERİ A.Ş</option>
+				<option>TURKCELL GAYRİMENKUL HİZMETLERİ A.Ş.</option>
+			</select>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Karşı taraf ünvanı</label>
+		<div class="controls">
+			<select class="form-control" required
+				cam-variable-name="karsiTarafUnvani" cam-variable-type="String">
+				<option>Ericsson</option>
+				<option>Ericsson ARGE</option>
+				<option>Ericsson Global</option>
+			</select>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Sözleşme Başlangıç Tarihi</label>
+		<div class="controls">
+			<input class="form-control" type="date"
+				cam-variable-name="sozlesmeBaslangicTarihi" cam-variable-type="String"
+				id="sozlesmeBaslangicTarihi" id="sozlesmeBaslangicTarihi">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Sözleşme Bitiş Tarihi</label>
+		<div class="controls">
+			<input class="form-control" type="date"
+				cam-variable-name="sozlesmeBitisTarihi" cam-variable-type="String"
+				id="sozlesmeBitisTarihi">
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label">Bedelli</label>
+		<div class="form-check form-check-inline">
+			<input class="form-check-input" type="radio" ng-model="value" name="bedelli" ng-change='newValue(value)'
+				id="bedelliEvet" value="Evet"> <label
+				class="form-check-label" for="bedelliEvet">Evet</label>
+		</div>
+		<div class="form-check form-check-inline">
+			<input class="form-check-input" type="radio" ng-model="value" name="bedelli" ng-change='newValue(value)'
+				id="bedelliHayir" value="Hayir"> <label
+				class="form-check-label" for="bedelliHayir">Hayır</label>
+		</div>
+	</div>
+	<div ng-show="value == 'Evet'">
+		<div class="control-group">
+			<label class="control-label">Sözleşme Bedeli</label>
+			<div class="controls">
+				<input class="form-control" type="number" min="0"
+					cam-variable-name="sozlesmeBedeli" cam-variable-type="Integer"
+					id="sozlesmeBedeli">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Lisans Başlangıç Tarihi</label>
+			<div class="controls">
+				<input class="form-control" type="date"
+					cam-variable-name="lisansBaslangicTarihi" cam-variable-type="String"
+					id="lisansBaslangicTarihi">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Lisans Bitiş Tarihi</label>
+			<div class="controls">
+				<input class="form-control" type="date"
+					cam-variable-name="lisansBitisTarihi" cam-variable-type="String"
+					id="lisansBitisTarihi">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Garanti Süresi</label>
+			<div class="controls">
+				<input class="form-control" type="text" id="garantiSuresi"
+					cam-variable-name="garantiSuresi" cam-variable-type="String">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Teslim Süresi</label>
+			<div class="controls">
+				<input class="form-control" type="text" id="teslimSuresi"
+					cam-variable-name="teslimSuresi" cam-variable-type="String">
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">Voucher</label>
+			<div class="controls">
+				<input class="form-control" type="text" id="voucher"
+					cam-variable-name="voucher" cam-variable-type="String">
+			</div>
+		</div>
+	</div>
+
+	<script cam-script type="text/form-script">
+	  $scope.newValue = function(value) {
+		 console.log(value);
+	  }
+	</script>
 </form>
