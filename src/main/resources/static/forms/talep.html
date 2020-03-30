@@ -114,8 +114,22 @@
 	</div>
 
 	<script cam-script type="text/form-script">
-	  $scope.newValue = function(value) {
-		 console.log(value);
-	  }
-	</script>
+var variableManager = camForm.variableManager;
+$scope.newValue = function(value) {
+    console.log(value);
+
+	/**
+    if (variableManager.variable('bedelli') != undefined) {
+        variableManager.createVariable({
+            name: 'bedelli',
+            type: 'String',
+            value: value,
+            isDirty: true
+        });
+    } else {
+        variableManager.variableValue('bedelli', value);
+    }
+	**/
+}
+    </script>
 </form>

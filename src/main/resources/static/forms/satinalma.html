@@ -93,4 +93,19 @@
 				cam-variable-type="String" class="form-control"></textarea>
 		</div>
 	</div>
+	<input type="button" ng-click="cancel()" value="Reddet" />
+
+	<script cam-script type="text/form-script">
+	var variableManager = camForm.variableManager;
+	  $scope.cancel = function(value) {
+		 console.log(value);
+		variableManager.createVariable({
+        name: 'satinalmaOnay',
+        type: 'String',
+        value: 'Red',
+        isDirty: true
+      });
+$scope.complete();
+	  }
+	</script>
 </form>
