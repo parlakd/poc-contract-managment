@@ -8,7 +8,7 @@
       <bpmn:incoming>Flow_1rvewcj</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_0487jkb" sourceRef="Event_1n57nte" targetRef="UT_Talep" />
-    <bpmn:userTask id="UT_Talep" name="Talep Giriş" camunda:formKey="embedded:app:forms/talep.html">
+    <bpmn:userTask id="UT_Talep" name="Talep Giriş" camunda:formKey="embedded:app:forms/talep.html" camunda:assignee="satinalmauzmani">
       <bpmn:incoming>Flow_0487jkb</bpmn:incoming>
       <bpmn:outgoing>Flow_1twwiv5</bpmn:outgoing>
     </bpmn:userTask>
@@ -20,11 +20,11 @@
     </bpmn:parallelGateway>
     <bpmn:sequenceFlow id="Flow_0xxpw3f" sourceRef="Gateway_15jdl3l" targetRef="UT_Satinalma" />
     <bpmn:sequenceFlow id="Flow_1oznqed" sourceRef="Gateway_15jdl3l" targetRef="UT_Hukuk" />
-    <bpmn:userTask id="UT_Satinalma" name="Satınalma Onayı" camunda:formKey="embedded:app:forms/satinalma.html">
+    <bpmn:userTask id="UT_Satinalma" name="Satınalma Onayı" camunda:formKey="embedded:app:forms/satinalma.html" camunda:assignee="satinalmayoneticisi">
       <bpmn:incoming>Flow_0xxpw3f</bpmn:incoming>
       <bpmn:outgoing>Flow_08wzxh2</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="UT_Hukuk" name="Hukuk Onayı" camunda:formKey="embedded:app:forms/hukuk.html">
+    <bpmn:userTask id="UT_Hukuk" name="Hukuk Onayı" camunda:formKey="embedded:app:forms/hukuk.html" camunda:assignee="hukukbirimi">
       <bpmn:incoming>Flow_1oznqed</bpmn:incoming>
       <bpmn:outgoing>Flow_19b8qgi</bpmn:outgoing>
     </bpmn:userTask>
@@ -35,7 +35,7 @@
     </bpmn:parallelGateway>
     <bpmn:sequenceFlow id="Flow_1p0pj9x" sourceRef="Gateway_0ab3fuz" targetRef="UT_Arsiv" />
     <bpmn:sequenceFlow id="Flow_1rvewcj" sourceRef="UT_Arsiv" targetRef="Event_15oufmv" />
-    <bpmn:userTask id="UT_Arsiv" name="Arşiv" camunda:formKey="embedded:app:forms/arsiv.html">
+    <bpmn:userTask id="UT_Arsiv" name="Arşiv" camunda:formKey="embedded:app:forms/arsiv.html" camunda:assignee="satinalmauzmani">
       <bpmn:incoming>Flow_1p0pj9x</bpmn:incoming>
       <bpmn:outgoing>Flow_1rvewcj</bpmn:outgoing>
     </bpmn:userTask>
